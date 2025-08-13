@@ -9,7 +9,7 @@
   </head>
   <body>
     <div class="container--body">
-      <header class="w-full bg-gray-500/10 shadow-xl/.5">
+      <header class="w-full bg-gray-500/10 shadow-xl/.5 px-2">
         <div
           class="container mx-auto max-w-[1200px] px-[2px] flex items-center justify-between pt-2 pb-4"
         >
@@ -27,14 +27,14 @@
                 <a
                   class="::after:content-[''] ::after:h-4 group-hover:text-slate-500 ::after:w-4 ::after:bg-red-500 ::after:absolute ::after:let-0 ::after:button-0 :hover::after:w-full"
                   href="#"
-                  >About</a
+                  >Pokemons</a
                 >
               </li>
               <li class="group">
                 <a
                   href="#"
                   class="::after:content-[''] group-hover:text-slate-500 ::after:h-4 ::after:w-4 ::after:bg-red-500 ::after:absolute ::after:let-0 ::after:button-0 :hover::after:w-full"
-                  >Services</a
+                  >Features</a
                 >
               </li>
               <li class="group">
@@ -105,31 +105,30 @@
             Welcome to Pokemon
           </h1>
           <p
-            class="text-xl md:text-2xl text-gray-900/70 font-bold leading-[1.2] md:max-w-2/4 text-gray-700 mb-6"
+            class="text-xl md:text-2xl text-gray-900/70 font-semibold md:font-bold leading-[1] md:leading-[1.2] md:max-w-2/4 text-gray-700 mb-6"
           >
             Discover the world of Pokemon, where you can catch, train, and
             battle your favorite creatures.
           </p>
           <a
             href="#"
-            class="inline-block bg-orange-500 text-white px-4 py-2 rounded"
+            class="inline-block bg-orange-500 text-white px-12 md:px-4 py-2 rounded"
           >
             Get Started
           </a>
         </section>
         <div class="search--container max-w-[1200px] mx-auto mt-8">
           <header
-            class="flex items-center w-full bg-orange-500 md:flex-row flex-col p-4"
+            class="flex items-center w-full p-4 bg-orange-500 md:flex-row flex-col"
           >
             <ul
-              class="flex md:justify-start justify-center list-none space-x-3 text-[14px] md:space-x-6 items-center p-2 bg-orange-500 text-white w-full"
+              class="flex flex-col sm:flex-row space-y-2 justify-start md:justify-start justify-center list-none space-x-3 text-[14px] md:space-x-6 items-center p-2 px-0 bg-orange-500 text-white w-full"
             >
-              <li><a href="#">Bulbasaur</a></li>
-              <li><a href="#">Charmander</a></li>
-              <li><a href="#">Squirtle</a></li>
-              <li><a href="#">Pidgey</a></li>
-              <li><a href="#">Rattata</a></li>
-              <li><a href="#">Jigglypuff</a></li>
+              <li class="w-full"><a href="#">Bulbasaur</a></li>
+              <li class="w-full"><a href="#">Charmander</a></li>
+              <li class="w-full"><a href="#">Squirtle</a></li>
+              <li class="w-full"><a href="#">Pidgey</a></li>
+              <li class="w-full"><a href="#">Rattata</a></li>
             </ul>
             <div class="box--search w-full">
               <input
@@ -143,7 +142,7 @@
 
         <section class="card--container">
           <div
-            class="container py-8 mx-auto md:px-0 px-0 max-w-[1200px] mx-auto container--items--pokemons grid gap-4 grid-cols-[repeat(auto-fit,minmax(260px,1fr))]"
+            class="container  py-8 mx-auto  px-6 max-w-[1200px] mx-auto container--items--pokemons grid gap-4 md:grid-cols-[repeat(auto-fit,minmax(260px,1fr))]"
           ></div>
         </section>
 
@@ -158,7 +157,7 @@
         </section>
         <section class="section--gallery">
           <div
-            class="container mx-auto max-w-[1200px] px-1 py-6 gallery grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-4"
+            class="container mx-auto max-w-[1200px] px-8 md:px-0 py-6 gallery grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-4"
           ></div>
         </section>
         <!-- Section FAQ -->
@@ -235,8 +234,8 @@
         </section>
       </main>
 
-      <footer class="bg-500">
-        <div class="container mx-auto p-12 text center font-bold font-mono">
+      <footer class="bg-500/10">
+        <div class="container mx-auto md:p-12 text center font-bold font-mono">
           <p class="text-center">
             Todos os direitos estão reservados no Pokedev
           </p>
