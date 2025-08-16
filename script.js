@@ -22,13 +22,24 @@ const navBar = document.querySelector("nav");
 const listLink = document.querySelector("ul");
 btnOpen.onclick = function (e) {
   const classOpen = e.target.classList.contains("icon--open");
+  const listMenu = document.querySelector("ul");
 
   if (classOpen) {
     e.target.classList.add("hidden");
     closeIcone.classList.remove("hidden");
     listLink.classList.add("flex", "absolute", "flex-col");
     navBar.classList.remove("hidden", "flex-col");
+    listMenu.classList.add(
+      "absolute",
+      "top-0",
+      "right-0",
+      "bg-white",
+      "w-[400px]"
+    );
+    listMenu.classList.remove("hidden");
+    
   }
+
   closeIcone.addEventListener("click", (_) => {
     e.target.classList.remove("hidden");
     closeIcone.classList.add("hidden");
