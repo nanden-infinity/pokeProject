@@ -1,12 +1,12 @@
-import { description } from "./js/view.js";
-import { apiUrl } from "./js/view.js";
+import { description } from "./build/js/view.js";
+import { apiUrl } from "./build/js/view.js";
 
 //   Getting the all elements in the DOM
 const input = document.querySelector("input[type=text]");
 
-input.addEventListener("keyup", function (event) {
-  const id = Number(event.target.value);
-  console.log(id);
+input.addEventListener("keyup", function () {
+  input.value = input.value.replace(/\D+/g, "");
+  pegarPokemon(`https://pokeapi.co/api/v2/pokemon?limit=${input}`);
 });
 
 const containerItemsPokemon = document.querySelector(
@@ -37,10 +37,9 @@ btnOpen.onclick = function (e) {
       "w-[400px]"
     );
     listMenu.classList.remove("hidden");
-    
   }
 
-  closeIcone.addEventListener("click", (_) => {
+  closeIcone.addEventListener("click", () => {
     e.target.classList.remove("hidden");
     closeIcone.classList.add("hidden");
     listLink.classList.remove("flex", "absolute", "flex-col");
@@ -61,7 +60,7 @@ async function xaP(name, url) {
     sprites: { front_default },
   } = dadosAlll;
   const html = `  <figure
-              class="card-items card--01 border shadow-2 group hover:bg-amber-400/10 hover:-translate-y-2 duration-150   w-full rounded-md border-orange-500/15 flex flex-col items-center p-4 bg-white cursor-pointer"
+              class="card-items card--01 border shadow-2 group hover:bg-amber-400/10 hover:-translate-y-2 duration-150   w-full rounded-md border-orange-500/15 flex flex-col items-center p-4 bg-amber-500 cursor-pointer"
             >
               <img
                 class="h-24 w-24"
@@ -84,7 +83,7 @@ async function xaP(name, url) {
     const lastFour = Array.from(lastFourFigures).slice(0, 6);
     // lastFour.map(element => divNew.innerHTML+= element).join("")
 
-    sectionGallery.innerHTML = "";
+  
     lastFour.forEach((element) =>
       sectionGallery.appendChild(element.cloneNode(true))
     );

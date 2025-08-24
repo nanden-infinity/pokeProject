@@ -1,0 +1,23 @@
+{
+  "name": "idade",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/nanden-infinity/pokeProject#readme",
+  "bugs": {
+    "url": "https://github.com/nanden-infinity/pokeProject/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nanden-infinity/pokeProject.git"
+  },
+  "license": "ISC",
+  "author": "nanden",
+  "type": "commonjs",
+  "main": "script.js",
+  "scripts": {
+    "dev": "npx tailwindcss -i ./src/input.css -o ./src/output.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.17"
+  }
+}
